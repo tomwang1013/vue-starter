@@ -1,0 +1,89 @@
+// 引入对整个页面的公共css
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Tahoma, Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Heiti SC",
+    "WenQuanYi Micro Hei", sans-serif;;
+  color: #333333;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+// 覆盖默认值
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul.nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  height: 4px;
+  border: 2px solid rgba(245, 245, 245, 0);
+  border-radius: 10px;
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+  user-select: none;
+}
+
+:-ms-input-placeholder {
+  color: #999;
+  user-select: none;
+  -ms-user-select: none;
+}
+
+// 删除输入框里面的叉叉
+::-ms-clear {
+  display: none;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pointer {
+  cursor: pointer;
+}

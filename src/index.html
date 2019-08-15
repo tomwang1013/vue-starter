@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta name="renderer" content="webkit|ie-stand">
+  <title>{{title}}</title>
+  <script type="text/javascript" src="/seeyon/common/cap4/design/js/out-sniff.js"></script>
+
+  <%
+    [
+      "/seeyon/common/all-min.css",
+      "/seeyon/skin/dist/common/skin.css",
+      "/seeyon/skin/dist/components/components_layout.css",
+      "/seeyon/skin/dist/components/components_theme_default.css"
+    ].forEach(function(css) { %>
+  <link rel="stylesheet" href="<%= css + '?_t=' + htmlWebpackPlugin.options._t %>">
+  <% }) %>
+
+  <!-- webpack插入css -->
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/javascript" src="<%= '/seeyon/cap4/fieldDesign.do?method=headerJs&_t='  + htmlWebpackPlugin.options._t %>"></script>
+
+  <%
+    [
+    "/seeyon/common/all-min.js",
+    ].forEach(function(js) { %>
+  <script type="text/javascript" src="<%= js + '?_t=' + htmlWebpackPlugin.options._t %>"></script>
+  <% }) %>
+
+  <!-- webpack插入js -->
+</body>
+</html>
